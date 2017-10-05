@@ -1,8 +1,10 @@
 var gulp = require("gulp");
-var htmlmin = require("gulp-htmlmin")
+var htmlmin = require("gulp-htmlmin");
+var sass = require("gulp-sass");
 
 gulp.task('mover-css', function(){
 	return gulp.src('./source/scss/*.scss')
+	.pipe(sass())
 	.pipe(gulp.dest('./dist/css'))
 });
 
